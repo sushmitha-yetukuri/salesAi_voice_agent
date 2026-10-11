@@ -1,0 +1,52 @@
+AI Voice Agent Assignment — Test Scenario Index
+
+tc01_eligible_customer
+Scenario: Standard eligible customer.
+Expected result: Agent collects the required eligibility details, confirms key information, and follows the configured qualification/handoff flow.
+
+tc02
+Scenario: Not present in the provided folder listing.
+Action: Confirm whether Test 2 is required by the assignment guide.
+
+tc03_agriculture
+Scenario: Customer has agricultural income.
+Expected result: Apply the configured agricultural-income eligibility rule. Disqualify or route appropriately according to the system prompt; do not invent policy.
+
+tc03_cash_income
+Scenario: Customer receives income in cash.
+Expected result: Immediate disqualification if cash income is an exclusion rule. Do not continue the normal qualification flow after confirming the disqualifying detail.
+
+tc04_missing_original_documents
+Scenario: Customer cannot provide the required original property documents.
+Expected result: Disqualify promptly if originals are mandatory. Explain briefly and politely; do not continue the standard qualification flow.
+
+tc05_short_tenure
+Scenario: Customer requests a loan tenure of 2 years.
+Expected result: Disqualify if this is below the configured minimum tenure. Do not invent an alternative tenure or policy.
+
+tc06_long_tenure
+Scenario: Customer requests a long loan tenure.
+Expected result: Check against the configured maximum tenure and respond according to the system prompt.
+
+tc07_90lakhs
+Scenario: Customer requests a loan amount of ₹90 lakh.
+Expected result: Check against the configured maximum loan amount (previously described as up to ₹75 lakh). Explain that the requested amount exceeds the stated limit and follow the configured next step without promising approval.
+
+tc08_joint_ownership
+Scenario: Property is jointly owned.
+Expected result: Ask the required clarifying questions about co-ownership/consent and follow the configured eligibility rules. Do not assume sole ownership.
+
+tc09_existing_loan
+Scenario: Customer already has an existing loan.
+Expected result: Clarify the customer's purpose and apply the configured existing-loan rule. If the customer wants to reduce an existing EMI rather than apply for a new Loan Against Property, route to the appropriate specialist if that transfer is configured.
+
+tc10_out_of_order
+Scenario: Customer provides information out of order or gives an unclear answer.
+Expected result: Handle the answer naturally, clarify only what is needed, retain already provided information, and avoid repeatedly asking for details already confirmed.
+
+tc11_busy
+Scenario: Customer is busy and cannot speak now.
+Expected result: Acknowledge politely and offer/arrange a callback only through the configured callback workflow. Do not continue the eligibility interview if the customer declines to proceed now.
+
+Submission note:
+This file is an index and expected-behaviour checklist, not evidence of completed calls. Generate the actual test calls in Retell AI and save the real recordings and matching transcripts for each scenario. Use the exact eligibility rules and transfer/callback actions configured in your agent.

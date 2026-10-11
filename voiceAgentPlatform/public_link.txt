@@ -1,0 +1,6 @@
+AI Voice Agent Assignment — Retell AI
+
+Agent Name: Home Credit LAP Qualifier
+
+Voice Agent Demo URL:
+https://agent.retellai.com/orb/agent_9870a797f822e05872e2b5c7b1?token=aa2c51ae81bdb30ce1cc93b82dad1081
